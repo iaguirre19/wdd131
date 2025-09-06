@@ -69,11 +69,11 @@ header {
     margin: 1rem 0;
     width: 100%;
     text-align: center;
+    color: white; /* Changed from yellow to white */
 }
-#course-title span {
-    font-weight: 600;
-    font-size: 1.8rem;
+header h1 {
     color: yellow;
+    font-size: 2.4rem;
 }
 .nav-content {
     background-color: #333;
@@ -301,9 +301,6 @@ footer p {
     #course-title {
         font-size: 2rem;
         margin: 0.6rem 0 0;
-    }
-    #course-title span {
-        font-size: 1.6rem;
     }
 
     /* Navigation */
