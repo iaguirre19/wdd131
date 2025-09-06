@@ -1,333 +1,385 @@
 :root {
-    --font: "Roboto", sans-serif;
-
-/* Spacing */
---spacing-xs: 0.4rem;   /* Extra small */
---spacing-sm: 0.8rem;   /* Small */
---spacing-md: 1.6rem;   /* Medium */
---spacing-lg: 2.4rem;   /* Large */
---spacing-xl: 3.2rem;   /* Extra large */
-
-/* Font Size */
---font-size-xs: 1.2rem;  /* Extra small */
---font-size-sm: 1.4rem;  /* Small */
---font-size-md: 1.6rem;  /* Medium */
---font-size-lg: 2rem;    /* Large */
---font-size-xl: 2.4rem;  /* Extra large */
-
-/* Elevation */
---elevation-xs: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1); /* Extra small */
---elevation-sm: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2); /* Small */
---elevation-md: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3); /* Medium */
---elevation-lg: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.4); /* Large */
---elevation-xl: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.5); /* Extra large */
-
-/* Primary Colors */
---primary-color: #3F51B5; /* Navy blue */
---primary-light: #C5CAE9;
---primary-dark: #303F9F;
-
-/* Secondary Colors */
---secondary-color: #FF9800; /* Orange */
---secondary-light: #FFE0B2;
---secondary-dark: #F57C00;
-
-/* Background Colors */
---background-color: #FFFFFF; /* White */
---background-dark: #F5F5F5;
-
-/* Text Colors */
---text-primary: #212121; /* Dark grey */
---text-secondary: #757575; /* Grey */
---text-hint: #BDBDBD; /* Light grey */
-
-/* Link Colors */
---link-color: var(--primary-color); /* Navy blue */
---link-hover: var(--primary-dark); /* Dark navy blue */
---link-visited: var(--primary-light); /* Light blue */
-
-/* Button Colors */
---button-color: var(--primary-color); /* Navy blue */
---button-hover: var(--primary-dark); /* Dark navy blue */
---button-text: #FFFFFF; /* White */
---button-disabled: #BDBDBD; /* Light grey */
-
-/* Divider Colors */
---divider-color: #BDBDBD; /* Light grey */
-
+    --accent: #0b6fa4;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #333;
+    --muted: #65707a;
+    --radius: 0.8rem;
+    --shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
+    --content-width: 100rem;
 }
 
-
-  *,
-*:before,
-*:after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+    box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
+
+html,
 body {
-    font-family: var(--font);
+    height: 100%;
+    margin: 0;
 }
-ul{
-    list-style: none;
-  }
 a {
     text-decoration: none;
-    color: black;
+    color: var(--accent);
+}
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
 }
 
-.container {
-  height: 100vh;
-  width: 120rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-md);
-  row-gap: var(--spacing-md);
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+        sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+}
+main {
+    max-width: 1280px;
+    margin: 3rem auto;
+    padding: 0 2rem;
 }
 
-.main-content,
-.footer {
-  flex: 1;
-  overflow-y: auto;
-}
-.page-header{
-  position: relative;
-}
-.page-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: var(--spacing-md);
-}
-.header-title{
-  font-size: var(--font-size-xl);
-}
-.header-title {
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
- }
-.main-navigation .nav-list{
-  display: flex;
-  font-size: var(--font-size-md);
-  align-items: center;
-  column-gap: var(--spacing-lg);
-}
-.nav-link{
-  font-weight: 500;
-  color: var(--text-hint);
-}
-.nav-link.active{
-  color: var(--link-color);
-}
-.nav-link {
-  position: relative;
-  padding-bottom: 5px; 
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px; 
-  background-color: var(--link-color); 
-}
-.main-content{
-  width: 80rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: var(--spacing-lg);
-  padding: 2rem;
-}
-.profile-card{
-  grid-column: 1/2;
-  grid-row: 1/3;
-}
-.profile-card,
-.aboutme-card,
-.links-card{
-  background-color: var(--primary-light);
-  width: 100%;
-  height: 100%;
-  border-radius: 1.2rem;
-  padding: var(--spacing-lg);
-  box-shadow: var(--elevation-sm);
-}
-.profile-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: var(--spacing-md);
-}
-.profile-img-container{
-  width: 24rem;
-  height: 28rem;
-  background-color: #303F9F;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-.profile-img-container .profile-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.profile-data {
-    font-family: var(--font);
-    padding: var(--spacing-sm);
+header {
+    background: linear-gradient(
+        0deg,
+        rgba(11, 111, 164, 0.97),
+        rgba(11, 111, 164, 0.97)
+    );
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-  
-  .profile-data h4 {
-    font-size: var(--font-size-md);
-    color: var(--text-primary);
-    margin-bottom: var(--spacing-xs);
-  }
-  
-  .profile-data p {
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
-  }
-  
-  .profile-data a {
-    display: flex;
-    align-items: center;
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .profile-data a:hover {
-    color: var(--link-hover);
-  }
-  
-  .profile-data .resource-icon {
-    font-size: var(--font-size-md);
-    margin-right: var(--spacing-xs);
-  }
-  .aboutme-card{
-    height: 28rem;
-  }
-  
-  .card-title:hover {
-    color: var(--link-hover);
-  }
-  
-  .card-content {
-    display: none;
-    max-height: 30rem; 
-    overflow-y: auto;
-  }
-
-  .card-title-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .card-title {
-    font-size: var(--font-size-md);
-    color: var(--text-primary);
-    margin-right: var(--spacing-md);
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .card-title:hover {
-    color: var(--link-hover);
-  }
-  .card-content p {
-    word-wrap: break-word;
-  }
-  .location-info p,
-  .my-profile p{
-    font-size: 1.4rem;
-    color: var(--text-secondary);
-  }
- 
-  .card-title {
-    position: relative;
-    padding-bottom: .5rem;
-  }
-  
-  .card-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: .2rem;
-    background-color: #3F51B5;
-    transition: width 0.3s ease;
-  }
-  
-  .card-title.active::after {
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+#course-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 1rem 0;
     width: 100%;
-  }
-  .links-card .card-title{
-    margin-bottom: var(--spacing-sm);
-  }
-  .resource-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .resource-list li {
-    width: calc(50% - .5rem);
-    margin-bottom: 1rem;
+    text-align: center;
+}
+#course-title span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: yellow;
+}
+.nav-content {
+    background-color: #333;
+    width: 100%;
+    height: 6rem;
     display: flex;
     align-items: center;
-  }
-  
-  .resource-icon {
-    margin-right: 1rem;
-    font-size: var(--font-size-md);
-  }
-  
-  .resource-link {
-    color: var(--link-color);
-    font-size: var(--font-size-sm);
+    justify-content: center;
+    border-radius: 0.6rem;
+}
+.nav-content .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.nav-content .nav-list li {
+    margin: 0 1rem;
+}
+.nav-content .nav-list li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.8rem 1.6rem;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.5rem;
+}
+.nav-content .nav-list li a:hover {
+    background-color: #fff;
+    color: #333;
+    border-radius: 4px;
+}
 
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .resource-link:hover {
-    color: #0056b3;
-  }
-  
-  .page-footer{
-    width: 80rem;
-    margin: 0 auto;
+/* Hamburger (hidden on desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 0.6rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.nav-toggle .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(20px) rotate(40deg);
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.cards-container {
+    display: flex;
+    gap: 2rem;
+}
+#about-me-section {
+    flex: 2;
+}
+#resources-section {
+    flex: 1;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background-color: var(--accent);
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    height: 10rem;
+}
+
+/* Normalize section header titles (About Me, etc.) */
+.section-header h2 {
+    font-size: 2.4rem;
+}
+
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+.aboutme-modern .aboutme-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+.aboutme-img {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-xl);
-    font-size: var(--font-size-sm);
-  }
-  .footer-info{
+    align-items: center;
+}
+.profile-img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10%;
+    box-shadow: 0 0.4rem 2rem rgba(11, 111, 164, 0.12);
+}
+.aboutme-text {
+    font-size: 1.6rem;
+    color: var(--text);
+}
+
+/* Cuernavaca card modern style */
+.card.cuernavaca-modern {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin: 0 auto;
+}
+.cuernavaca-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+.cuernavaca-img {
     display: flex;
-  }
-  .current-year{
-    margin-right: .6rem;
-  }
+    justify-content: flex-end;
+    align-items: center;
+}
+.cuernavaca-flag {
+    max-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 0.4rem 2rem rgba(11, 111, 164, 0.1);
+    margin: 0 auto;
+    display: block;
+}
+.card.cuernavaca-modern h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+}
+.card.cuernavaca-modern p {
+    font-size: 1.6rem;
+    color: var(--text);
+    margin-bottom: 0;
+}
+
+/* Web Dev Resources section */
+#resources-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.resources-modern {
+    width: 100%;
+    padding: 0 2rem;
+}
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.resources-list li a {
+    font-size: 1.6rem;
+    color: var(--accent);
+    transition: color 0.3s;
+}
+.resources-list li a:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+
+footer {
+    background: linear-gradient(
+        0deg,
+        rgba(11, 111, 164, 0.97),
+        rgba(11, 111, 164, 0.97)
+    );
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+footer p {
+    margin: 0;
+    font-size: 2rem;
+}
+.last-modified {
+    font-size: 1.4rem;
+    color: yellow;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+    /* Page spacing */
+    main {
+        margin: 2rem auto;
+        padding: 0 1.2rem;
+    }
+
+    /* Header & title */
+    header {
+        padding: 1.4rem 1rem;
+        gap: 0.6rem;
+    }
+    #course-title {
+        font-size: 2rem;
+        margin: 0.6rem 0 0;
+    }
+    #course-title span {
+        font-size: 1.6rem;
+    }
+
+    /* Navigation */
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-content {
+        height: auto;
+        padding: 0.4rem 0;
+        width: 100%;
+        border-radius: 0;
+        display: none;
+    }
+    .nav-content.open {
+        display: flex;
+    }
+    .nav-content .nav-list {
+        width: 100%;
+        justify-content: center;
+        gap: 0.4rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .nav-content .nav-list li {
+        margin: 0;
+    }
+    .nav-content .nav-list li a {
+        font-size: 1.4rem;
+        padding: 0.9rem 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Sections */
+    .cards-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .cards-grid {
+        padding: 0 1rem;
+    }
+    .section-header {
+        height: auto;
+        padding: 0.8rem 0;
+        margin-bottom: 1rem;
+    }
+    .section-header h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    /* About me */
+    .aboutme-modern .aboutme-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .profile-img {
+        max-width: 130px;
+        margin: 0 auto;
+    }
+    .aboutme-text {
+        font-size: 1.5rem;
+    }
+
+    /* Cuernavaca */
+    .cuernavaca-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .cuernavaca-flag {
+        max-width: 130px;
+    }
+    .cuernavaca-img {
+        justify-content: center;
+        order: -1;
+    }
+}

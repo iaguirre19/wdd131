@@ -1,80 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Iran Aguirre</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDD 131 - Dynamic Web Fundamentals - Iran Aguirre</title>
+        <meta
+            name="description"
+            content="WDD 131 – Dynamic Web Fundamentals | Iran Aguirre — Portfolio and exercises covering HTML, CSS, JavaScript, responsive design, and accessibility."
+        />
+        <meta name="author" content="Iran Aguirre" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Base styles -->
+        <link rel="stylesheet" href="./styles/base.css" />
+    </head>
+    <body>
+        <header>
+            <h1 id="course-title">
+                WDD 131 - Dynamic Web Fundamentals - <span>Iran Aguirre</span>
+            </h1>
 
-</head>
-<body>
-    <div class="container">
-        <header class="page-header">
-            <h1 class="header-title">WDD 131 - Dynamic Web Fundamentals - Iran Aguirre</h1>
-            <nav class="main-navigation">
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-content" id="primary-navigation">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="https://www.linkedin.com/in/iran-aguirre/" class="nav-link active" target="_blank">My LinkedIn</a></li>
-                    <li class="nav-item"><a href="https://byui.instructure.com/" class="nav-link" target="_blank">I-Learn</a></li>
-                    <li class="nav-item"><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=spa&id=p7-p8#p7" class="nav-link" target="_blank">Favorite Scripture</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" target="_blank">Final Project Folder</a></li>
+                    <li class="nav-item">
+                        <a
+                            href="https://www.linkedin.com/in/iran-aguirre/"
+                            class="nav-link active"
+                            target="_blank"
+                            rel="noopener"
+                            >My LinkedIn</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="https://byupw.instructure.com/"
+                            class="nav-link"
+                            target="_blank"
+                            rel="noopener"
+                            >Canvas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=spa&id=p7-p8#p7"
+                            class="nav-link"
+                            target="_blank"
+                            rel="noopener"
+                            >Favorite Scripture</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#"
+                            class="nav-link"
+                            target="_blank"
+                            rel="noopener"
+                            >Final Project Folder</a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
-            
-        <main class="main-content">
-            <section class="card profile-card">
-                <div class="profile-img-container">
-                    <img src="./images/profile.jpeg" alt="Iran's Picture" class="profile-img">
+        <main>
+            <div class="cards-container">
+                <div id="about-me-section" class="cards-wrapper">
+                    <div class="section-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="cards-grid">
+                        <section class="left-card card aboutme-modern">
+                            <div class="aboutme-grid">
+                                <div class="aboutme-img">
+                                    <img
+                                        src="./images/profile.jpeg"
+                                        alt="Iran's Picture"
+                                        class="profile-img"
+                                    />
+                                </div>
+                                <div class="aboutme-text">
+                                    <p>
+                                        Hello! My name is Iran Aguirre. I am
+                                        originally from Mexico City and
+                                        currently live in Cuernavaca, Morelos,
+                                        Mexico. This portfolio showcases my
+                                        journey through WDD 131, where I am
+                                        developing skills in HTML, CSS, and
+                                        JavaScript with a focus on responsive
+                                        design and semantic, accessible web
+                                        development.
+                                    </p>
+                                    <p>
+                                        I am passionate about creating engaging,
+                                        user-friendly web experiences and enjoy
+                                        exploring new technologies. Outside of
+                                        coding, I love spending time with my
+                                        wife and son, learning, and discovering
+                                        innovative ways to solve problems.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="card cuernavaca-modern">
+                            <div class="cuernavaca-grid">
+                                <div class="cuernavaca-text">
+                                    <h2>Cuernavaca Morelos, Mexico</h2>
+                                    <p>
+                                        Cuernavaca is known as the "City of
+                                        Eternal Spring" due to its pleasant
+                                        climate year-round. It's a popular
+                                        destination for those seeking a warm
+                                        getaway. The city is rich in history and
+                                        culture, with attractions like the
+                                        Palacio de Cortés, a historic palace
+                                        built by Hernán Cortés, and the
+                                        beautiful Jardín Borda, a historic
+                                        garden that offers a peaceful retreat.
+                                    </p>
+                                </div>
+                                <div class="cuernavaca-img">
+                                    <img
+                                        src="./images/cuernavaca-flag.webp"
+                                        alt="Flag of Cuernavaca, Morelos"
+                                        class="cuernavaca-flag"
+                                    />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div class="profile-data">
-                    <h4>Iran Aguirre</h4>
-                    <p>iran@gmail.com</p>
-                    <a href="https://www.linkedin.com/in/iran-aguirre/" target="_blank">
-                        <i class="fab fa-linkedin resource-icon"></i>
-                        <span>LinkedIn</span>
-                    </a>
+                <div class="cards-wrapper" id="resources-section">
+                    <div class="section-header">
+                        <h2>Web Dev Resources</h2>
+                    </div>
+                    <section class="resources-modern">
+                        <ul class="resources-list">
+                            <li>
+                                <a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >MDN Web Docs - HTML</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >MDN Web Docs - CSS</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >MDN Web Docs - JavaScript</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://css-tricks.com/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >CSS-Tricks</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.w3schools.com/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >W3Schools</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://web.dev/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >web.dev</a
+                                >
+                            </li>
+                        </ul>
+                    </section>
                 </div>
-            </section>
-            <section class="card aboutme-card">
-                <div class="card-title-row">
-                    <h2 class="card-title" data-target="my-profile">About Me</h2>
-                    <h2 class="card-title" data-target="my-country">Where I Am</h2>
-                  </div>
-                <div class="card-content my-profile">
-                  <p>My name is Iran Ricardo Aguirre Castañeda. I was born and raised in Mexico City. At the age of 14, I moved with my parents to Cuernavaca, Morelos, where I lived until I was 18. After that, I served a full-time mission in the Mexico Guadalajara East Mission. Upon returning from my mission service, I worked for a telecommunications company for two years and then moved to California to work in IT. I met my wife through a dating app called MUTUAL, and I traveled to Brazil to meet her. We have been married for 4 years now and have a beautiful son.</p>
-                </div>
-                <div class="card-content my-country">
-                  <div class="location-info">
-                    <p class="location-description">Cuernavaca, Morelos, is a vibrant city located in central Mexico. Known for its pleasant climate, Cuernavaca is often referred to as the "City of Eternal Spring." It boasts beautiful colonial architecture, lush gardens, and a rich cultural heritage. Many visitors are drawn to its historic landmarks, such as the Palacio de Cortés and the Cuernavaca Cathedral. Additionally, Cuernavaca is famous for its traditional cuisine, including dishes like mole poblano and cochinita pibil.</p>
-                  </div>
-                </div>
-              </section>
-              <section class="card links-card">
-                <h2 class="card-title">Web Dev Resources</h2>
-                <ul class="resource-list">
-                    <li><i class="fab fa-github resource-icon"></i><a href="#" class="resource-link" target="_blank">GitHub</a></li>
-                    <li><i class="fab fa-linkedin resource-icon"></i><a href="#" class="resource-link" target="_blank">LinkedIn</a></li>
-                    <li><i class="fab fa-google resource-icon"></i><a href="#" class="resource-link" target="_blank">Material Design</a></li>
-                    <li><i class="fab fa-apple resource-icon"></i><a href="#" class="resource-link" target="_blank">Apple</a></li>
-                    <li><i class="fab fa-gitlab resource-icon"></i><a href="#" class="resource-link" target="_blank">GitLab</a></li>
-                    <li><i class="fab fa-node resource-icon"></i><a href="#" class="resource-link" target="_blank">Node</a></li>
-                </ul>
-            </section>
-            
-        </main>  
+            </div>
+        </main>
         <footer class="page-footer">
             <p class="footer-info">
-              <span id="currentyear" class="current-year"></span> Iran R. Aguirre Morelos, Mexico
+                <span id="currentyear" class="current-year"></span> Iran R.
+                Aguirre Morelos, Mexico
             </p>
             <p id="lastModified" class="last-modified"></p>
         </footer>
-    </div>
-      
-    <script src="./scripts/getdates.js"></script>
-</body>
+        <script src="./scripts/getdates.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
 </html>
