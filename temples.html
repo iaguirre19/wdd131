@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Temples WDD 131 - Iran Aguirre</title>
+        <meta name="description" content="Temple Album — A responsive gallery showcasing Latter-day Saint temples with accessible markup, semantic HTML, and mobile‑first CSS for WDD 131 by Iran Aguirre." />
+        <meta name="author" content="Iran R. Aguirre Morelos" />
+
+        <link rel="stylesheet" href="./styles/temples.css" />
+        <link rel="stylesheet" href="./styles/temples-large.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="title">Temple Album</h1>
+            <nav class="nav" id="navLinks">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Old</a>
+                <a href="#" class="nav-link">New</a>
+                <a href="#" class="nav-link">Large</a>
+                <a href="#" class="nav-link">Small</a>
+            </nav>
+            <button id="hamburguerBtn" class="hamburguer">&#9776;</button>
+        </header>
+
+        <main class="main">
+            <h2 class="heading">Home</h2>
+            <div class="temple-grid">
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/San-Diego-California-Temple3.webp"
+                        alt="San Diego California Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        San Diego California
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/salt_lake_temple_lds.webp"
+                        alt="Salt Lake City Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Salt Lake City Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/rome_italy_temple.webp"
+                        alt="Rome Italy Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Roma Italy Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/taylorsville_utah_temple_exteriors.webp"
+                        alt="Taylorsville Utah Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Taylorsville Utah Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/layton_utah_temple_exterior.webp"
+                        alt="Layton Utah Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Layton Utah Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/Oakland-California-Temple1b.webp"
+                        alt="Oakland California Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Oakland California Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/moses_lake_washington_temple_exterior.webp"
+                        alt="Moses Lake Washington Temple "
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Moses Lake Washington Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/orem_utah_temple_exterior.webp"
+                        alt="Orem Utah Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Orem Utah Temple
+                    </figcaption>
+                </figure>
+                <figure class="temple-figure">
+                    <img
+                        src="./images/temples/saratoga_springs.webp"
+                        alt="Saratoga Springs Utah Temple"
+                        class="temple-image"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <figcaption class="temple-caption">
+                        Saratoga Springs Utah Temple
+                    </figcaption>
+                </figure>
+            </div>
+        </main>
+        <footer class="footer">
+            <p class="footer-info">
+                <span id="currentYear" class="current-year"></span> Iran R.
+                Aguirre Morelos, Mexico
+            </p>
+            <p id="lastModified" class="last-modified"></p>
+        </footer>
+        <script src="./scripts/temples.js" defer></script>
+        <script src="./scripts/getdates.js" defer></script>
+    </body>
+</html>
