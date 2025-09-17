@@ -1,0 +1,83 @@
+/* Mexico City Page - Desktop Responsive Styles */
+/* Breakpoint: 1024px and above for desktop layout */
+
+@media (min-width: 1024px) {
+    /* Header enhancements for desktop */
+    header {
+        padding: 3rem 2rem;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+
+    /* Main content with background image layout */
+    main {
+        padding: 0;
+        max-width: 100vw;
+        position: relative;
+        min-height: 100vh;
+        background-image: url("../images/country/mexcity-1600.webp");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Hide the hero image section in desktop */
+    .hero-image {
+        display: none;
+    }
+
+    /* Data section positioned on the left */
+    .data-section {
+        position: relative;
+        z-index: 10;
+        flex: 0 0 350px;
+        margin-bottom: 0;
+        align-self: flex-start;
+        margin-top: 5rem;
+    }
+
+    /* Weather section positioned on the right */
+    .weather-section {
+        position: relative;
+        z-index: 10;
+        flex: 0 0 350px;
+        margin-bottom: 0;
+        align-self: flex-end;
+        margin-bottom: 5rem;
+    }
+
+    /* Footer positioned at bottom */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 15;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
+
+/* Extra large screens (1440px+) */
+@media (min-width: 1440px) {
+    main {
+        padding: 3rem;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .data-section,
+    .weather-section {
+        flex: 0 0 400px;
+    }
+}

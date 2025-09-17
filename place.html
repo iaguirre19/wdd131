@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Country or Place - Iran Aguirre</title>
+        <meta
+            name="description"
+            content="Country or Place - A responsive gallery showcasing various countries and places with accessible markup, semantic HTML, and mobile‑first CSS for WDD 131 by Iran Aguirre."
+        />
+        <meta name="author" content="Iran R. Aguirre Morelos" />
+
+        <link rel="stylesheet" href="./styles/country.css" />
+        <link rel="stylesheet" href="./styles/country-large.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1>Mexico City</h1>
+        </header>
+
+        <main>
+            <section class="hero-image">
+                <picture>
+                    <!-- Desktop -->
+                    <source
+                        type="image/webp"
+                        media="(min-width: 1024px)"
+                        srcset="./images/country/mexcity-1600.webp"
+                    />
+                    <!-- Tablet -->
+                    <source
+                        type="image/webp"
+                        media="(min-width: 640px)"
+                        srcset="./images/country/mexcity-1000.webp"
+                    />
+                    <!-- Mobile/default fallback -->
+                    <img
+                        src="./images/country/mexcity.webp"
+                        alt="Ciudad de México: vista urbana/skyline"
+                        loading="eager"
+                        decoding="async"
+                    />
+                </picture>
+                <div class="image-placeholder">
+                    <span>Small Image</span>
+                </div>
+            </section>
+
+            <section class="data-section">
+                <h2>Data</h2>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Area:</span>
+                        <span class="value">1,485 sq km</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Population:</span>
+                        <span class="value">9,209,944</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Capital:</span>
+                        <span class="value">Ciudad de México</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Languages:</span>
+                        <span class="value">Spanish, Nahuatl</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Currency:</span>
+                        <span class="value">Mexican Peso</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Time Zone:</span>
+                        <span class="value">UTC-6</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Calling Code:</span>
+                        <span class="value">+52</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Internet TLD:</span>
+                        <span class="value">.mx</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-section">
+                <h2>Weather</h2>
+                <div class="weather-icon">
+                    <div class="icon-placeholder"></div>
+                </div>
+                <div class="weather-data">
+                    <div class="weather-item">
+                        <span class="label">Temperature:</span>
+                        <span class="value">22°C</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="label">Conditions:</span>
+                        <span class="value">Partly Cloudy</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="label">Wind:</span>
+                        <span class="value">8 km/h</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="label">Humidity:</span>
+                        <span class="value">65%</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>©2024 🌮 Iran R. Aguirre Morelos 🌮 Ciudad de México</p>
+            <p>Last Modification: 16/09/2024 14:30:00</p>
+        </footer>
+
+        <script src="./scripts/country.js"></script>
+    </body>
+</html>
