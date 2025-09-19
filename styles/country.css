@@ -28,7 +28,6 @@ body {
     min-height: 100vh;
 }
 
-/* Estilos para cards en mobile */
 .cards-container {
     background: #fff;
     border-radius: 12px;
@@ -48,10 +47,30 @@ body {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    position: relative;
 }
 
 .weather-section .section-header {
     background-color: var(--red);
+}
+
+/* Decorative accent using ::after */
+.cards-container .section-header::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(var(--white), rgba(255, 255, 255, 0.4));
+    opacity: 0.35;
+}
+
+.weather-section .section-header::after {
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0.5));
+    opacity: 0.5;
 }
 
 /* Header icon shared styles */
@@ -140,7 +159,7 @@ main {
 }
 
 .image-placeholder {
-    display: none; /* Hide placeholder for real implementation */
+    display: none;
 }
 
 /* Data Section - Basic structure only */
