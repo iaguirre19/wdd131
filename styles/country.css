@@ -45,10 +45,28 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 .weather-section .section-header {
     background-color: var(--red);
+}
+
+/* Header icon shared styles */
+.section-header .section-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    stroke: currentColor;
+    color: inherit;
+}
+
+.section-header h2 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
 }
 
 .card-content {
