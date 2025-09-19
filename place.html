@@ -6,9 +6,9 @@
         <title>Country or Place - Iran Aguirre</title>
         <meta
             name="description"
-            content="Country or Place - A responsive gallery showcasing various countries and places with accessible markup, semantic HTML, and mobile‑first CSS for WDD 131 by Iran Aguirre."
+            content="Country or Place - A demo page showing data and weather for a specific country or place. Mobile-first CSS and accessible markup for WDD 131 by Iran Aguirre."
         />
-        <meta name="author" content="Iran R. Aguirre Morelos" />
+        <meta name="author" content="Iran R. Aguirre" />
 
         <link rel="stylesheet" href="./styles/country.css" />
         <link rel="stylesheet" href="./styles/country-large.css" />
@@ -159,11 +159,15 @@
             </section>
         </main>
 
-        <footer>
-            <p>©2024 🌮 Iran R. Aguirre Morelos 🌮 Ciudad de México</p>
-            <p>Last Modification: 16/09/2024 14:30:00</p>
+        <footer class="footer">
+            <p class="footer-info">
+                <span id="currentYear" class="current-year"></span> Iran R.
+                Aguirre Castañeda 🌮, Morelos Mexico
+            </p>
+            <p id="lastModified" class="last-modified"></p>
         </footer>
 
         <script src="./scripts/country.js"></script>
+        <script src="./scripts/getdates.js" defer></script>
     </body>
 </html>
