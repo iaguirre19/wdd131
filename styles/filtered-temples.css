@@ -1,0 +1,103 @@
+.body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #4e2a84;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+
+    flex: 1;
+}
+.heading {
+    text-align: center;
+}
+.temple-figure {
+    margin: 0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #4e2a84;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Card grid */
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* Card container */
+.temple-figure {
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.temple-figure:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Card image */
+.temple-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card title */
+.temple-caption {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 12px 16px 6px 16px;
+}
+
+/* Card meta */
+.temple-figure p {
+    margin: 4px 16px 10px 16px;
+    color: #555;
+    line-height: 1.4;
+}

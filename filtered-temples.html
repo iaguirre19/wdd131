@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Filtered Temples WDD 131 - Iran Aguirre</title>
+        <meta
+            name="description"
+            content="Filtered Temple Album — A responsive gallery generated dynamically with JavaScript for WDD 131 by Iran Aguirre."
+        />
+        <meta name="author" content="Iran R. Aguirre Castañeda" />
+
+        <link rel="stylesheet" href="./styles/filtered-temples.css" />
+        <link rel="stylesheet" href="./styles/filtered-temples-large.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="title">Temple Album</h1>
+            <nav class="nav" id="navLinks">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Old</a>
+                <a href="#" class="nav-link">New</a>
+                <a href="#" class="nav-link">Large</a>
+                <a href="#" class="nav-link">Small</a>
+            </nav>
+            <button id="hamburguerBtn" class="hamburguer">&#9776;</button>
+        </header>
+
+        <main class="main">
+            <h2 class="heading">Home</h2>
+            <div class="temple-grid"></div>
+        </main>
+        <footer class="footer">
+            <p class="footer-info">
+                © <span id="currentYear" class="current-year"></span> Iran R.
+                Aguirre Castañeda 🌮, Mexico
+            </p>
+            <p id="lastModified" class="last-modified"></p>
+        </footer>
+        <script src="./scripts/filtered-temples.js" defer></script>
+        <script src="./scripts/getdates.js" defer></script>
+    </body>
+</html>

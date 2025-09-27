@@ -1,0 +1,77 @@
+@media only screen and (min-width: 768px) {
+    .temple-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .nav {
+        display: flex;
+    }
+
+    .hamburger,
+    .hamburguer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        position: relative;
+    }
+
+    .temple-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .temple-figure {
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #4e2a84;
+        z-index: 10;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger,
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+    }
+
+    .title.hidden-mobile {
+        display: none;
+    }
+}
