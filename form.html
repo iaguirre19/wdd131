@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rayane's Cinnamon Rolls | Product Review</title>
+        <meta
+            name="description"
+            content="Product review form for Rayane's Cinnamon Rolls."
+        />
+        <meta name="author" content="Iran Aguirre" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/form.css" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                <span id="form-title">Rayane's Cinnamon Rolls</span>
+                — Cinnamon Roll Reviews
+            </h1>
+        </header>
+        <main>
+            <section class="form-card" aria-labelledby="reviewFormHeading">
+                <h2 id="reviewFormHeading" class="section-title">
+                    Share Your Experience
+                </h2>
+                <form method="get" action="review.html" class="review-form">
+                    <fieldset>
+                        <legend class="sr-only">Product details</legend>
+
+                        <div class="form-control">
+                            <label for="productName">Roll Flavor</label>
+                            <select
+                                id="productName"
+                                name="productName"
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Select a flavor ...
+                                </option>
+                                <!-- Options populated by JS -->
+                            </select>
+                        </div>
+
+                        <div class="form-control">
+                            <span class="control-label">Overall Rating</span>
+                            <div
+                                class="rating"
+                                role="radiogroup"
+                                aria-label="Overall Rating"
+                            >
+                                <input
+                                    type="radio"
+                                    id="rating5"
+                                    name="rating"
+                                    value="5"
+                                    required
+                                />
+                                <label for="rating5" title="5 stars">★</label>
+
+                                <input
+                                    type="radio"
+                                    id="rating4"
+                                    name="rating"
+                                    value="4"
+                                />
+                                <label for="rating4" title="4 stars">★</label>
+
+                                <input
+                                    type="radio"
+                                    id="rating3"
+                                    name="rating"
+                                    value="3"
+                                />
+                                <label for="rating3" title="3 stars">★</label>
+
+                                <input
+                                    type="radio"
+                                    id="rating2"
+                                    name="rating"
+                                    value="2"
+                                />
+                                <label for="rating2" title="2 stars">★</label>
+
+                                <input
+                                    type="radio"
+                                    id="rating1"
+                                    name="rating"
+                                    value="1"
+                                />
+                                <label for="rating1" title="1 star">★</label>
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="purchaseDate">Purchase date</label>
+                            <input
+                                type="date"
+                                id="purchaseDate"
+                                name="purchaseDate"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-control">
+                            <span class="control-label"
+                                >What did you like? (check all that apply)</span
+                            >
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        id="feature1"
+                                        name="features"
+                                        value="durability"
+                                    />
+                                    <label for="feature1">Freshness</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        id="feature2"
+                                        name="features"
+                                        value="ease-of-use"
+                                    />
+                                    <label for="feature2">Icing</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        id="feature3"
+                                        name="features"
+                                        value="design"
+                                    />
+                                    <label for="feature3">Portion size</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        id="feature4"
+                                        name="features"
+                                        value="performance"
+                                    />
+                                    <label for="feature4">Warmth</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input
+                                        type="checkbox"
+                                        id="feature5"
+                                        name="features"
+                                        value="value"
+                                    />
+                                    <label for="feature5">Packaging</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="review"
+                                >Written review (optional)</label
+                            >
+                            <textarea
+                                id="review"
+                                name="review"
+                                rows="5"
+                                placeholder="Tell us about your experience..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="username">Your name (optional)</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Jane Doe"
+                            />
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <input
+                            type="submit"
+                            value="Submit review"
+                            class="btn"
+                        />
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <p class="footer-info">
+                © <span id="currentyear" class="current-year"></span> Rayane's
+                Cinnamon Rolls · Iran R. Aguirre · Morelos, Mexico
+            </p>
+            <p id="lastModified" class="last-modified"></p>
+        </footer>
+        <script src="./scripts/getdates.js" defer></script>
+        <script src="./scripts/form.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Review Submitted | Rayane's Cinnamon Rolls</title>
+        <meta
+            name="description"
+            content="Review submission confirmation and counter."
+        />
+        <meta name="author" content="Iran Aguirre" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/form.css" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                <span id="form-title">Rayane's Cinnamon Rolls</span>
+                — Cinnamon Roll Reviews
+            </h1>
+        </header>
+        <main>
+            <section class="form-card" aria-labelledby="confirmHeading">
+                <h2 id="confirmHeading" class="section-title">Thank you!</h2>
+                <p>Your review was submitted successfully.</p>
+
+                <div class="counter-card">
+                    <p>
+                        Total reviews on this device:
+                        <strong id="reviewCount">0</strong>
+                    </p>
+                </div>
+
+                <div class="form-actions">
+                    <a class="btn" href="form.html">Submit another review</a>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <p class="footer-info">
+                © <span id="currentyear" class="current-year"></span> Rayane's
+                Cinnamon Rolls · Iran R. Aguirre · Morelos, Mexico
+            </p>
+            <p id="lastModified" class="last-modified"></p>
+        </footer>
+        <script src="./scripts/getdates.js" defer></script>
+        <script src="./scripts/review.js" defer></script>
+    </body>
+</html>

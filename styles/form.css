@@ -1,0 +1,149 @@
+:root {
+    --brand: #8b5e3c;
+    --brand-dark: #5a3b26;
+    --bg: #fff7ea;
+    --border: #e7d6c3;
+    --card: #ffffff;
+    --radius: 0.6rem;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --form-gap: 1.5rem;
+}
+body {
+    background: var(--bg);
+}
+header {
+    background: #fffaf0;
+    border-bottom: 1px solid var(--border);
+}
+header h1 {
+    color: #4a2e16;
+    text-shadow: none;
+    font-weight: 700;
+}
+
+header h1 span {
+    color: var(--brand);
+}
+footer.page-footer {
+    border-top: 1px solid var(--border);
+}
+
+.form-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin: 0 0 1rem 0;
+    color: var(--brand-dark);
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-gap);
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.form-control {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.form-control label,
+.control-label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    font: inherit;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox-group {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.checkbox-item {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.form-actions {
+    margin-top: 0.8rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--brand-dark);
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+}
+
+/* Simple star rating layout (right-to-left so higher first) */
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+}
+.rating input {
+    position: absolute;
+    opacity: 0;
+}
+.rating label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: #c5d0db;
+}
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffb400;
+}
+
+.counter-card {
+    background: #f7fafc;
+    border: 1px solid #e6ebf0;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .form-card {
+        padding: 1.4rem;
+    }
+}
