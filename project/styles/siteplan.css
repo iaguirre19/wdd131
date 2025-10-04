@@ -35,10 +35,21 @@ header {
     z-index: 1;
     box-shadow: 0 2px 15px rgba(139, 94, 60, 0.08);
 }
+.container-fluid {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+
+    flex-direction: column;
+    gap: 1rem;
+}
 .wrap {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem;
+    width: 100%;
 }
 .title {
     font-family: "Merriweather", Poppins, Inter, sans-serif;
