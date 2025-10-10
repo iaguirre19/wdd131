@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Home page for the Final Project site"
+        />
+        <meta name="author" content="Iran Aguirre" />
+        <title>Home — Final Project</title>
+        <!-- Fonts: Inter for body, Poppins for headings -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome (icons) -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/home.css" />
+    </head>
+    <body>
+        <header class="site-header container">
+            <div class="brand">
+                <a class="logo-link" href="index.html" aria-label="Home">
+                    <img
+                        src="images/logos/Rayaness-cin-logo.svg"
+                        alt="Rayaness Cin logo"
+                        class="logo"
+                        width="80"
+                        height="45"
+                        decoding="async"
+                    />
+                    <span class="site-title">Rayane's Cinnamon Rolls</span>
+                </a>
+            </div>
+            <button
+                class="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero-title">
+                        Handcrafted Cinnamon Rolls, <br />
+                        Baked with <span class="highlight">Love</span> and a
+                        Dash of <span class="highlight">Magic</span>
+                        <figure>
+                            <img
+                                src="images/menu/roll-05.webp"
+                                alt="Hero Figure"
+                            />
+                        </figure>
+                        .
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover the irresistible aroma and gooey perfection
+                        that makes every bite a moment to cherish.
+                    </p>
+                    <a href="menu.html" class="btn hero-cta"
+                        >Explore Our Menu</a
+                    >
+                </div>
+            </section>
+
+            <section class="featured-products">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span class="highlight">Exquisite</span> Taste <br />For
+                        True Connoisseurs
+                    </h2>
+                    <p class="section-subtitle">
+                        Our handcrafted cinnamon rolls are made daily with
+                        premium ingredients
+                    </p>
+
+                    <div class="product-showcase">
+                        <div class="product-images">
+                            <div class="product-image-container">
+                                <!-- Product cards will be rendered here -->
+                            </div>
+                        </div>
+
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">Different Flavors</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1</div>
+                                <div class="stat-label">Location</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10K+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img
+                            src="images/logos/Rayaness-cin-logo.svg"
+                            alt="Rayaness Cin logo"
+                            width="60"
+                            height="34"
+                            decoding="async"
+                        />
+                    </div>
+                    <div class="footer-links">
+                        <nav aria-label="Footer">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="menu.html">Menu</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> Rayane's Cinnamon
+                    Rolls. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
