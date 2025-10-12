@@ -5,23 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
             name="description"
-            content="Contact page for the Final Project site"
+            content="Contact Rayane's Cinnamon Rolls for orders, catering, and inquiries. We're here to help with all your sweet needs."
         />
         <meta name="author" content="Iran Aguirre" />
-        <title>Contact Us — Final Project</title>
-        <!-- Fonts moved from CSS: Inter for body, Poppins for headings -->
+        <meta name="robots" content="index, follow" />
+        <link
+            rel="canonical"
+            href="https://rayanescinnamonrolls.com/contact.html"
+        />
+        <title>Contact Us</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
+            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
-            rel="stylesheet"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
         />
-        <!-- Font Awesome (icons) -->
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
+        <!-- Font Awesome - load asynchronously -->
         <link
-            rel="stylesheet"
+            rel="preload"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
             crossorigin="anonymous"
-            referrerpolicy="no-referrer"
         />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            />
+        </noscript>
+        <!-- Load CSS with optimized priority -->
         <link rel="stylesheet" href="styles/base.css" />
         <link rel="stylesheet" href="styles/contact.css" />
     </head>
@@ -56,14 +79,226 @@
             </nav>
         </header>
 
-        <main class="container">
-            <section>
-                <h1 class="heading">Contact Us</h1>
-                <h2>Get in touch</h2>
-                <p>Provide your contact details and a form here.</p>
+        <main>
+            <section class="contact-hero">
+                <div class="container">
+                    <h1 class="page-title hero-title">
+                        Get in <span class="highlight">Touch</span> with Us
+                    </h1>
+                    <p class="page-subtitle">
+                        We'd love to hear from you! Fill out the form below and
+                        we'll get back to you as soon as possible.
+                    </p>
+                </div>
             </section>
+
+            <section class="contact-form-section">
+                <div class="container">
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <h2>Contact Information</h2>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <h3>Visit Us</h3>
+                                        <p>
+                                            123 Bakery Street<br />Sweet City,
+                                            SC 12345
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <h3>Call Us</h3>
+                                        <p>(555) 123-4567</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <h3>Email Us</h3>
+                                        <p>info@rayanescin.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <h3>Opening Hours</h3>
+                                        <p>
+                                            Mon-Fri: 7am - 8pm<br />Sat-Sun: 8am
+                                            - 9pm
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="contactForm" class="contact-form">
+                            <h2>Send us a Message</h2>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName"
+                                        >First Name
+                                        <span class="required">*</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        required
+                                        placeholder="Your first name"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName"
+                                        >Last Name
+                                        <span class="required">*</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        required
+                                        placeholder="Your last name"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email"
+                                    >Email
+                                    <span class="required">*</span></label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="your.email@example.com"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="(555) 123-4567"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject"
+                                    >Subject
+                                    <span class="required">*</span></label
+                                >
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>
+                                        Choose a subject
+                                    </option>
+                                    <option value="order">
+                                        Order Information
+                                    </option>
+                                    <option value="flavors">
+                                        Custom Roll Flavors
+                                    </option>
+                                    <option value="bulk">
+                                        Bulk Orders & Special Events
+                                    </option>
+                                    <option value="ingredients">
+                                        Ingredients & Allergens
+                                    </option>
+                                    <option value="delivery">
+                                        Delivery Options
+                                    </option>
+                                    <option value="feedback">
+                                        Product Feedback
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"
+                                    >Message
+                                    <span class="required">*</span></label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    placeholder="Tell us how we can help you..."
+                                ></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input
+                                    type="checkbox"
+                                    id="newsletter"
+                                    name="newsletter"
+                                />
+                                <label for="newsletter"
+                                    >Subscribe to our newsletter for special
+                                    offers</label
+                                >
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i> Send
+                                Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <div id="formSubmissionMessage" class="submission-message hidden">
+                <div class="message-content">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>
+                        Thank you for contacting us. We'll get back to you soon
+                        with our sweet response!
+                    </p>
+                    <button id="closeMessage">Close</button>
+                </div>
+            </div>
         </main>
 
-        <script src="scripts/main.js"></script>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img
+                            src="images/logos/rayaness-cin-logo.svg"
+                            alt="Rayaness Cin logo"
+                            width="60"
+                            height="34"
+                            decoding="async"
+                        />
+                    </div>
+                    <div class="footer-links">
+                        <nav aria-label="Footer">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="menu.html">Menu</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> Rayane's Cinnamon
+                    Rolls. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+
+        <script src="scripts/main.js" defer></script>
+        <script src="scripts/contact.js" defer></script>
     </body>
 </html>

@@ -5,32 +5,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
             name="description"
-            content="Home page for the Final Project site"
+            content="Handcrafted cinnamon rolls baked fresh daily. Try our signature Blackberry Jam, Cinnamon Glazed, and Chocolate Walnut rolls."
         />
         <meta name="author" content="Iran Aguirre" />
-        <title>Home — Final Project</title>
-        <!-- Fonts: Inter for body, Poppins for headings -->
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://rayanescinnamonrolls.com/" />
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            as="font"
+            href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+            crossorigin="anonymous"
+        />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            />
+        </noscript>
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/home.css" />
+        <link rel="preload" as="image" href="images/menu/roll-01.webp" />
+        <link rel="preload" as="image" href="images/menu/roll-02.webp" />
+        <link rel="preload" as="image" href="images/menu/roll-03.webp" />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
             rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
         />
-        <!-- Font Awesome (icons) -->
         <link
-            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
             crossorigin="anonymous"
-            referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/home.css" />
     </head>
     <body>
         <header class="site-header container">
             <div class="brand">
                 <a class="logo-link" href="index.html" aria-label="Home">
                     <img
-                        src="images/logos/Rayaness-cin-logo.svg"
+                        src="images/logos/rayaness-cin-logo.svg"
                         alt="Rayaness Cin logo"
                         class="logo"
                         width="80"
@@ -109,7 +151,7 @@
                                 <div class="stat-label">Location</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">10K+</div>
+                                <div class="stat-number">400+</div>
                                 <div class="stat-label">Happy Customers</div>
                             </div>
                         </div>
@@ -123,7 +165,7 @@
                 <div class="footer-content">
                     <div class="footer-logo">
                         <img
-                            src="images/logos/Rayaness-cin-logo.svg"
+                            src="images/logos/rayaness-cin-logo.svg"
                             alt="Rayaness Cin logo"
                             width="60"
                             height="34"
@@ -147,6 +189,6 @@
             </div>
         </footer>
 
-        <script src="scripts/main.js"></script>
+        <script src="scripts/main.js" defer></script>
     </body>
 </html>

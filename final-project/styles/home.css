@@ -1,7 +1,3 @@
-/* Home page styles (renamed from page1.css) */
-@import url("./base.css");
-
-/* Page-specific overrides or components */
 main.page-1 {
     background: var(--bg);
 }
@@ -10,7 +6,7 @@ main.page-1 {
     padding: 5rem 1rem;
     background: linear-gradient(180deg, var(--card), #fffaf0 60%);
     border-bottom: none;
-    text-align: center; /* Center the content */
+    text-align: center;
     position: relative;
 }
 .hero .title {
@@ -57,20 +53,18 @@ main.page-1 {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     margin-bottom: -15px;
-    display: none; /* Hide by default on mobile */
+    display: none;
 }
 
-/* Show image next to "Magic" on desktop */
 @media (min-width: 768px) {
     .hero-title figure img {
         display: inline-block;
         margin-left: 10px;
         transform: translateY(5px) rotate(5deg);
-        width: 120px; /* Larger on desktop */
+        width: 120px;
     }
 }
 
-/* Even larger on bigger screens */
 @media (min-width: 1024px) {
     .hero-title figure img {
         width: 90px;
@@ -94,7 +88,6 @@ main.page-1 {
     text-decoration: none;
 }
 
-/* Featured Products Section */
 .featured-products {
     padding: 5rem 0;
     background: linear-gradient(
@@ -155,7 +148,6 @@ main.page-1 {
 }
 
 .product-card {
-    /* Background-color will be set dynamically via JavaScript */
     margin-top: 2rem;
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -198,10 +190,11 @@ main.page-1 {
 
 .product-image {
     width: 100%;
-    height: auto;
+    height: 250px;
     border-radius: 14px 14px 0 0;
     object-fit: cover;
     transition: transform 0.4s ease;
+    aspect-ratio: 4/3;
 }
 
 .product-card:hover .product-image {

@@ -81,13 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById(containerId);
         if (!container) return;
 
+        // Use DocumentFragment for better performance
+        const fragment = document.createDocumentFragment();
+
         products.forEach((product) => {
             const productCard = document.createElement("div");
             productCard.className = "menu-product-card";
             productCard.style.backgroundColor = product.background;
 
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.title}" class="menu-product-image">
+                <img src="${product.image}" alt="${product.title}" class="menu-product-image" loading="lazy" decoding="async" width="300" height="200">
                 <div class="menu-product-content">
                     <h3 class="menu-product-title">${product.title}</h3>
                     <p class="menu-product-description">${product.description}</p>
@@ -98,8 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            container.appendChild(productCard);
+            fragment.appendChild(productCard);
         });
+
+        container.appendChild(fragment);
     }
 
     // Render all product sections

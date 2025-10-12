@@ -1,7 +1,7 @@
 const productRoles = [
     {
         title: "Blackberry Jam",
-        image: "images/menu/rol-01.webp",
+        image: "images/menu/roll-01.webp",
         background: "#f5e1ef",
     },
     {
@@ -21,7 +21,8 @@ function renderProductCards() {
     const productContainer = document.querySelector(".product-image-container");
 
     if (productContainer) {
-        productContainer.innerHTML = "";
+        // Use DocumentFragment for better performance
+        const fragment = document.createDocumentFragment();
 
         productRoles.forEach((product) => {
             const card = document.createElement("div");
@@ -29,14 +30,16 @@ function renderProductCards() {
             card.style.backgroundColor = product.background;
 
             card.innerHTML = `
-                <img src="${product.image}" alt="${product.title}" class="product-image">
+                <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" decoding="async" width="300" height="250">
                 <div class="product-card-title-content">
                     <h3 class="product-title">${product.title}</h3>
                 </div>
             `;
 
-            productContainer.appendChild(card);
+            fragment.appendChild(card);
         });
+
+        productContainer.appendChild(fragment);
     }
 }
 
